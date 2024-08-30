@@ -1,4 +1,4 @@
-''' ITERATION 2
+''' ITERATION 3
 
 Module: Alpha Analytics - Reusable Module for My Data Analytics Projects
 
@@ -7,33 +7,46 @@ When we work hard to write useful code, we want it to be reusable.
 A good byline could be used in every Python analytics project we do.
 
 Process:
-In this second iteration,add a function that returns the byline as a string.
-
-1.I'll create a function named get_byline()
-   
-2. I'll return my byline to whatever calls the get_byline() function .
-
-3. I'll update the main() function to use the new get_byline() function.
-
-4. Same conditional boilerplate at the end.
-
-I'll test this version in an online interpreter to ensure this version runs correctly before continuing.
-It will demonstrate my ability to:
--declare variables of different types.
--Use Python to calculate basic descriptive statistics.
+In this third iteration, additional variables have bee declared to show my ability to use different data types
 '''
 
 #####################################
+# Declare a global variable-Keeping the byline at the end.
+#We will use this information in a smarter byline
+#####################################
+
+#Boolean variables to indicate if the company has international clients.
+has_international_client:bool = True
+
+#Integer variable to determine the number of years in operation.
+years_in_operation:int = 10
+
+#List of strings representing the skills offered by the company
+skills_offered:list = ["Data Analysis","Machine Learning","Business Intelligence"]
+
+#List of floats representing individual client satisfaction
+client_satisfaction_scores:list = [4.8,4.6,4.9,5.0,4.7]
+
+#####################################
 # Declare a global variable named byline.
+#Make it a multiline f-string to show our information.
 #####################################
 
-byline: str = 'Alpha Analytics: Delivering Transforming Insights'
+byline:str = f"""
+------------------------------------------------------------
+Alpha Analytics: Delivering Transforming Insights
+------------------------------------------------------------
+Has International Clients: {has_international_client}
+years in Operation: {years_in_operation}
+Skills Offered: {skills_offered}
+Client satisfaction Score:{client_satisfaction_scores}
+"""
 
 #####################################
-# Define the get_byline() Function.
+# Define the get_byline() function.
 #####################################
 
-def get_byline()->str:
+def get_byline()-> str:
     '''Return a byline for my analytics projects.'''
     return byline 
 
@@ -46,10 +59,7 @@ def get_byline()->str:
 def main() -> None:
     '''Print the byline to the console when this function is called.'''
     print(get_byline())
-
-#####################################
-# Conditional Execution
-#####################################
-
+    
+    # Call main function if this script is executed directly
 if __name__ == '__main__':
     main()
