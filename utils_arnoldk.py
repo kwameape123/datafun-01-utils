@@ -1,15 +1,12 @@
-''' ITERATION 4
+''' ITERATION 5
 
 Module: Alpha Analytics - Reusable Module for My Data Analytics Projects
 
-This module provides a simple, reusable foundation for my analytics projects. 
-When we work hard to write useful code, we want it to be reusable.
-A good byline could be used in every Python analytics project we do. We also experiment with some basic statistics.
+In this iteration we are going to update out byline reflect descriptive statistical measures of the client_satisfaction_scores
+variable. It is the only list in our code that contain a numerical list.
 
 Process:
-To calculate some basic statistics we use:
--The built in max() and min() function and
--The statistics module to calculate the mean and standard deviation of some variables.
+Include the previously declared variables assigned statistical measure values to the fstring of the byline.
 '''
 #####################################
 # Import Modules at the Top
@@ -63,6 +60,10 @@ Has International Clients: {has_international_client}
 years in Operation: {years_in_operation}
 Skills Offered: {skills_offered}
 Client satisfaction Score:{client_satisfaction_scores}
+Maximum_Satisfaction_score:{max_score}
+Minimum_Satisfaction_score:{min_score}
+Average_Satisfaction_score:{mean_score}
+Stdev_Satisfaction_score:{stdev_score}
 """
 
 #####################################
