@@ -1,14 +1,25 @@
-''' ITERATION 3
+''' ITERATION 4
 
 Module: Alpha Analytics - Reusable Module for My Data Analytics Projects
 
 This module provides a simple, reusable foundation for my analytics projects. 
 When we work hard to write useful code, we want it to be reusable.
-A good byline could be used in every Python analytics project we do.
+A good byline could be used in every Python analytics project we do. We also experiment with some basic statistics.
 
 Process:
-In this third iteration, additional variables have bee declared to show my ability to use different data types
+To calculate some basic statistics we use:
+-The built in max() and min() function and
+-The statistics module to calculate the mean and standard deviation of some variables.
 '''
+#####################################
+# Import Modules at the Top
+#####################################
+
+#In Python, we can import modules to add extra tools and functions.
+#Below, we are importing:
+#-'statistics module':This gives us tools to calculate important statistical measures.
+
+import statistics
 
 #####################################
 # Declare a global variable-Keeping the byline at the end.
@@ -26,6 +37,18 @@ skills_offered:list = ["Data Analysis","Machine Learning","Business Intelligence
 
 #List of floats representing individual client satisfaction
 client_satisfaction_scores:list = [4.8,4.6,4.9,5.0,4.7]
+
+#####################################
+# Calculate Basic statistics.
+#   Do this BEFORE we declare a byline.
+#   So the values have been calculated
+#   and ready for use in the byline.
+#####################################
+
+min_score:float = min(client_satisfaction_scores)
+max_score:float = max(client_satisfaction_scores)
+mean_score:float = statistics.mean(client_satisfaction_scores)
+stdev_score:float = statistics.stdev(client_satisfaction_scores)
 
 #####################################
 # Declare a global variable named byline.
