@@ -1,4 +1,4 @@
-''' ITERATION 5
+''' ITERATION 5 CORRECTED
 
 Module: Alpha Analytics - Reusable Module for My Data Analytics Projects
 
@@ -35,8 +35,11 @@ skills_offered:list = ["Data Analysis","Machine Learning","Business Intelligence
 #List of floats representing individual client satisfaction
 client_satisfaction_scores:list = [4.8,4.6,4.9,5.0,4.7]
 
+#List representing experience of our 6 employees(analysts) 
+employee_experience_years:list = [10,15,11,13,7,9]
+
 #####################################
-# Calculate Basic statistics.
+# Calculate Basic statistics
 #   Do this BEFORE we declare a byline.
 #   So the values have been calculated
 #   and ready for use in the byline.
@@ -46,6 +49,11 @@ min_score:float = min(client_satisfaction_scores)
 max_score:float = max(client_satisfaction_scores)
 mean_score:float = statistics.mean(client_satisfaction_scores)
 stdev_score:float = statistics.stdev(client_satisfaction_scores)
+min_experience:float = min(employee_experience_years)
+max_experience:float = max(employee_experience_years)
+mean_experience:float = statistics.mean(employee_experience_years)
+stdev_experience:float = statistics.stdev(employee_experience_years)
+
 
 #####################################
 # Declare a global variable named byline.
@@ -63,7 +71,11 @@ Client satisfaction Score:{client_satisfaction_scores}
 Maximum_Satisfaction_score:{max_score}
 Minimum_Satisfaction_score:{min_score}
 Average_Satisfaction_score:{mean_score}
-Stdev_Satisfaction_score:{stdev_score}
+Stdev_Satisfaction_score:{stdev_score}\n
+Maximum_employee_experience:{max_experience}
+Minimum_employee_experience:{min_experience}
+Average_employee_experience:{mean_experience}
+Stdev_employee_experience:{stdev_experience}
 """
 
 #####################################
